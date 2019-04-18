@@ -843,6 +843,10 @@ var InputManager = new Class({
 
                     break;
                 }
+                else
+                {
+                    pointer.active = false;
+                }
             }
         }
 
@@ -881,6 +885,10 @@ var InputManager = new Class({
                     changed.push(pointer);
 
                     break;
+                }
+                else
+                {
+                    pointer.active = false;
                 }
             }
         }
