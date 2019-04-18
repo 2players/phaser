@@ -241,7 +241,14 @@ var Game = new Class({
          * @type {Phaser.Scale.ScaleManager}
          * @since 3.16.0
          */
-        this.scale = new ScaleManager(this, this.config);
+        if (config.scaleManagerClass)
+        {
+            this.scale = new config.scaleManagerClass(this, this.config);
+        }
+        else
+        {
+            this.scale = new ScaleManager(this, this.config);
+        }
 
         /**
          * An instance of the base Sound Manager.
